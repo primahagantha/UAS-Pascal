@@ -27,7 +27,7 @@ procedure totalNilai(nilai1:real; nilai2:real; nilai3:real; nilai4:real; nilai5:
 	else
 	if Nilai >= 1.5 then
 	begin	
-	hasil	:= 'F';
+	hasil:= 'F';
 	end
 	else
 	begin
@@ -38,9 +38,9 @@ end;
 type
 
 time = record
-tanggal:integer;
-bulan:integer;
-tahun:integer;
+tanggal:1..31;
+bulan:1..12;
+tahun:1900..2022;
 end;
 
 Biodata = record
@@ -71,8 +71,8 @@ for i := 1 to n do
 	with date do
 	begin
 		writeln('Isi tanggal-bulan-tahun saat ini');
-		write('Masukkan Tanggal saat ini (1-31) 			:	');readln(tanggal);
-		write('Masukkan Bulan saat ini   (1-12) 			:	');readln(bulan);
+		write('Masukkan Tanggal saat ini (1-31) 			        :	');readln(tanggal);
+		write('Masukkan Bulan saat ini   (1-12) 			        :	');readln(bulan);
 		write('Masukkan Tahun saat ingin (0-2022)			:	');readln(tahun);
 		writeln('Isi nilai mata kuliah anda disini dengan range (1-4)');
 		write('Masukkan nilai mata kuliah Sistem-Digital 			:	 '); readln(sisdig);
@@ -91,7 +91,7 @@ for i := 1 to n do
 		begin
 		writeln('hasil data mahasiswa ke-',i);
 		writeln('Nama 		: ',nama);
-		writeln('Nim		: ',nim);
+		writeln('Nim		        : ',nim);
 		writeln('KOM 		: ',Kom);
 		with date do 
 		begin
@@ -103,7 +103,7 @@ for i := 1 to n do
 		writeln('Nilai OAK 			- ',Oak:4:2);
 		writeln('Nilai matdas 			- ',matdas:4:2);
 		writeln('Nilai daspro 			- ',daspro:4:2);
-		writeln('Nilai pik 			- ',pik:4:2);
+		writeln('Nilai pik 			        - ',pik:4:2);
 		writeln('=================================');
 		writeln('Nilai Ip adalah 		- ', hasil);
 		readln;
